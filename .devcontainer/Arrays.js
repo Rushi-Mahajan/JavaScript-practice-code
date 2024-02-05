@@ -72,6 +72,15 @@ let crteam=[...IPL,...BBL]
 // Return true is the valuen is an array 
 // Return false is the vallue is not arrays
 
+console.log(Array.from("Hrushikesh"))
+// Return a new set of array from above values
+// Like --> "H","r","u","s","h","i","k","e","s","h"
 
+let score01=100
+let score02=200
+let score03=300
 
+console.log(Array.of(score01,score02,score03))
+// Return a new set of array from  values sets
+// Like --> [100,200,300]
 
