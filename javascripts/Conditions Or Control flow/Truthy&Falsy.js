@@ -34,6 +34,19 @@ if(Object.keys(a).length===0){
 
 // Nullish Coaleascing operator (??): null undefined
 let val1
-val1=5 ?? 10
+// val1=5 ?? 10
+// Val1 value is 5
+// val1=null ?? 20
+// Val1 value is 20
+// val1=undefined ?? 2
+// Val1 value is 2
+
+val1=20??null??12
+// Val1 value is 20
+
 
 console.log(val1);
+
+// Ternary operator
+let score=1
+score>0? console.log("one") :  console.log("Zero");
