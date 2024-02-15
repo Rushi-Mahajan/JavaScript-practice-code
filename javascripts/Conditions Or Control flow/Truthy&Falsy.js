@@ -31,3 +31,9 @@ const a={}
 if(Object.keys(a).length===0){
     console.log("Object is empty");
 }
+
+// Nullish Coaleascing operator (??): null undefined
+let val1
+val1=5 ?? 10
+
+console.log(val1);
