@@ -1,0 +1,25 @@
+<!-- How to create an Node List -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color:black; color:white">
+    
+</body>
+<script>
+let div=document.createElement("div")
+// to set ID, Class
+div.setAttribute("class","parent");
+div.setAttribute("id","myid");
+console.log(div);
+// textnode is created using TextNode
+// appendChild is use to add the element in the parent element
+div.style.backgroundColor="red"
+let text=document.createTextNode("Hello world")
+div.appendChild(text)
+document.body.appendChild(div)
+</script>
+</html>

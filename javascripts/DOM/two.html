@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <!-- hello -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    let parent=document.querySelector(".parent")
+    // console.log(parent) 
+    // console.log(parent.children)
+    // Return the HTMLCollection with child element of parent class
+    // since it as HTML collections, we can access the child by using []
+    // console.log(parent.children[0].innerHTML)     
+
+    for (let index = 0; index < parent.children.length; index++) {
+        const element = parent.children[index];
+        // console.log(element.innerHTML)    
+    }
+    // Output
+    // Monday
+    //  Tuesday
+    //  Wednesday
+    //  Thursday
+
+    parent.children[1].style.color="green"
+    // return the first element of parent class
+    // console.log(parent.firstElementChild.innerHTML);
+    // return the last element of parent class
+    // console.log(parent.lastElementChild.innerHTML);
+    // console.log(parent);
+
+
+    let child=document.querySelector(".day")
+    // Return the parent element of the child
+    // console.log(child.parentElement);
+
+    // Return the parent element of the sibling of child element
+    console.log(child.nextElementSibling.innerHTML);
+    // console.log(child.nextSibling.innerHTML);
+
+    // its return the nodeslist 
+    console.log("Nodes:", parent.childNodes);
+    NodeList(11) [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text]
+// 0: text
+// 1: comment
+// 2: text
+// 3: div.day
+// 4: text
+// 5: div.day
+// 6: text
+// 7: div.day
+// 8: text
+// 9: div.day
+// 10: text
+
+
+
+</script>    
+</html>
