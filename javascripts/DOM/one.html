@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <title>Dom Learning</title>
 
+    <style>
+        .bgcolor{
+            background-color: black;
+            color:white
+        }
+    </style>
 </head>
 <body class="bgcolor">
-        <h1 class="heading">DOM learning on self</h1>
+        <h1 id="title" class="heading">DOM learning on self <span style="display: none;">Hello world</span></h1>
         <p>Lorem ipsum dolor sit amet.</p>  
-        
+
+        <h2 class="one1" id="one" title="one">one</h2>
+        <h2 title="two">two</h2>
+        <h2>three</h2>
+        <h2>four</h2>
+
+        <input type="text">
+
+
+        <ul>
+            <li class="list">One</li>
+            <li class="list">"two</li>
+            <li class="list">three</li>
+            <li class="list">four</li>
+        </ul>
+
     </body>
+    <script>
+        console.log(document.getElementById('title'));
+    </script>
 </html>
