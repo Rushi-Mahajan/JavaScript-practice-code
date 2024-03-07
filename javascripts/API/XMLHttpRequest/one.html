@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let XHR=new XMLHttpRequest();
+    XHR.open("GET","https://api.github.com/users/Rushi-Mahajan")
+    XHR.onreadystatechange=function(){
+            console.log(XHR.readyState);
+            if(XHR.readyState===4){
+                let profie=JSON.parse(this.responseText);
+                console.log(profie);
+                console.log(profie.followers);
+            }
+        }
+
+    XHR.send()
+
+
+</script>
+</html>

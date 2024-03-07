@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API tasks</title>
+    <style>
+        .Card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* border: 1px solid black; */
+            height: 100%;
+        }
+        body{
+            height: 97vh;
+            /* border: 1px solid red; */
+        }
+        .border{
+            border: 1px solid black;
+            border-radius:10% ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        img{
+            border-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="Card">
+        <div class="border">
+        <div class="profilepic">   
+            <img src="" alt=""> 
+        </div>
+        <p>Followers count:- <span class="count">0</span></p>
+    </div>
+</div>
+</body>
+<script>
+    let xhr=new XMLHttpRequest();
+    xhr.open("GET","https://api.github.com/users/Rushi-Mahajan")
+    xhr.send()
+    xhr.onreadystatechange=function(){
+        // console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            let profile=JSON.parse(this.responseText)
+            console.log(profile);
+            document.querySelector(".count").textContent=profile.followers
+            document.querySelector(".profilepic").innerHTML=`
+            <img src="${profile.avatar_url}" style="border-radius: 11% 11% 0% 0%;"></img>
+            `
+        }
+    }
+
+</script>
+</html>
